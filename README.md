@@ -17,6 +17,7 @@ System Health Monitor is a lightweight Bash script designed for beginners to lea
 - Linux system
 - Bash shell
 - `sudo` privileges (required to write logs to `/var/log`)
+- Docker (optional, for containerized deployment)
 
 ## Installation & Usage
 
@@ -40,6 +41,17 @@ cat /var/log/system_health.log
 # Or follow it live
 tail -f /var/log/system_health.log
 ```
+## Running with Docker
+**You can also containerize the script using Docker:**
+```bash
+# Build the Docker image
+docker build -t system-health-monitor .
+
+# Run the container
+docker run --rm system-health-monitor
+
+```
+
 ## Configuration
 **Edit the script to set thresholds according to your preference:**
 ```bash
